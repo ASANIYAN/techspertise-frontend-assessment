@@ -9,6 +9,7 @@ import { CustomInput } from "@/components/inputs/custom-input";
 
 import signin_img from "../../../public/assets/images/signin-img.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const validationSchema = yup.object().shape({
   email: yup
@@ -83,10 +84,12 @@ const SignIn = () => {
         <p className="text-sm font-normal mt-8">
           {" "}
           Don&apos;t have an account?{" "}
-          <span className="text-color5 font-medium ml-0.5 mt-10 md:cursor-pointer">
-            {" "}
-            Sign up{" "}
-          </span>{" "}
+          <Link href={"sign-up"}>
+            <span className="text-color5 font-medium ml-0.5 mt-10 md:cursor-pointer">
+              {" "}
+              Sign up{" "}
+            </span>{" "}
+          </Link>
         </p>
       </section>
       <Image
