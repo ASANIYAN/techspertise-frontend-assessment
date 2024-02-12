@@ -133,7 +133,7 @@ const StudentsTable = () => {
             />
             <p className="text-gray-900 text-sm font-medium">
               {" "}
-              {info.getValue().split(",")[0]} {info.getValue().split(",")[3]}{" "}
+              {info.getValue().split(",")[0]}
             </p>
           </section>
         ),
