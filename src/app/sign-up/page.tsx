@@ -12,7 +12,8 @@ import Button from "@/components/button/button";
 import Link from "next/link";
 
 const validationSchema = yup.object().shape({
-  name: yup.string().required("name is required"),
+  firstname: yup.string().required("firstname is required"),
+  lastname: yup.string().required("lastname is required"),
   email: yup
     .string()
     .email("invalid email address")
@@ -24,7 +25,8 @@ const validationSchema = yup.object().shape({
 });
 
 type SignupFormValues = {
-  name: string;
+  firstname: string;
+  lastname: string;
   email: string;
   password: string;
 };
@@ -49,10 +51,17 @@ const SignUp = () => {
         </h1>
         <section className="flex flex-col mt-8 h-full w-full max-w-[400px]">
           <CustomInput
-            name="name"
+            name="firstname"
             defaultType="text"
-            placeholder="Enter your name"
-            label="Name*"
+            placeholder="Enter your first name"
+            label="First name*"
+            method={method}
+          />
+          <CustomInput
+            name="lastname"
+            defaultType="text"
+            placeholder="Enter your last name"
+            label="Last name*"
             method={method}
           />
           <CustomInput
