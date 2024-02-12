@@ -73,7 +73,7 @@ const Table = <T extends object>({ data, columns, click }: TableProps<T>) => {
             value={globalFilter ?? ""}
             onChange={(e) => setGlobalFilter(e.target.value)}
           />
-          <section className="shadow-xs border-gray-300 bg-white flex items-center gap-1">
+          <section className="shadow-xs py-2.5 px-4 rounded-lg border border-gray-300 bg-white flex items-center gap-1 md:cursor-pointer">
             <Image
               src={filter_icon}
               className=""
