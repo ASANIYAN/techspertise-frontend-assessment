@@ -34,13 +34,13 @@ const SignIn = () => {
   const handleLogin = () => {};
 
   return (
-    <section className="flex h-screen">
-      <section className="w-1/2 h-full flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-semibold text-center text-color1">
+    <section className="flex justify-center h-screen">
+      <section className="w-full xl:w-1/2 h-full flex flex-col justify-center items-center px-3">
+        <h1 className="text-2xl lg:text-3xl font-semibold text-center text-color1">
           {" "}
           Welcome back{" "}
         </h1>
-        <p className="text-base font-normal text-center text-color2 mt-3">
+        <p className="text-sm lg:text-base font-normal text-center text-color2 mt-1 sm:mt-3">
           {" "}
           Welcome back! Please enter your details.{" "}
         </p>
@@ -59,18 +59,18 @@ const SignIn = () => {
             label="Password"
             method={method}
           />
-          <section className="flex justify-between items-center mt-2">
+          <section className="flex flex-wrap justify-center gap-2.5 xxs:justify-between items-center mt-2">
             <section className="flex items-center gap-2.5">
               <input
                 type="checkbox"
                 className="border border-color7 w-[16px] h-[16px] rounded md:cursor-pointer"
               />
-              <span className="font-medium text-sm text-color3">
+              <span className="font-medium text-xs xs:text-[13px] sm:text-sm text-color3">
                 {" "}
                 Remember for 30 days{" "}
               </span>
             </section>
-            <span className="font-semibold text-sm text-color4 md:cursor-pointer">
+            <span className="font-semibold text-xs xs:text-[13px] sm:text-sm text-color4 md:cursor-pointer">
               {" "}
               Forgot password{" "}
             </span>
@@ -95,7 +95,7 @@ const SignIn = () => {
       <Image
         src={signin_img}
         alt="signin_img"
-        className="h-full w-1/2 hidden lg:block"
+        className="h-full w-1/2 hidden xl:block"
       />
     </section>
   );

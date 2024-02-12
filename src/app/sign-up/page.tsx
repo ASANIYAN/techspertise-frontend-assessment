@@ -38,12 +38,12 @@ const SignUp = () => {
 
   const handleSignup = () => {};
   return (
-    <section className="flex h-screen">
-      <section className="w-[60%] hidden lg:block">
+    <section className="flex justify-center h-screen">
+      <section className="w-[60%] hidden xl:block">
         <Image src={signup_img} className="h-full" alt="signup-img" />
       </section>
-      <section className="flex flex-col justify-center items-center flex-1 pt-6">
-        <h1 className="text-3xl font-semibold text-center text-color1">
+      <section className="h-full flex flex-col justify-center items-center flex-1 pt-8 px-3 sm:px-0">
+        <h1 className="text-2xl lg:text-3xl font-semibold text-center text-color1">
           {" "}
           Sign up{" "}
         </h1>
