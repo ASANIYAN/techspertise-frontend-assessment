@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
+
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -8,8 +11,6 @@ import Button from "@/components/button/button";
 import { CustomInput } from "@/components/inputs/custom-input";
 
 import signin_img from "../../../public/assets/images/signin-img.png";
-import Image from "next/image";
-import Link from "next/link";
 
 const validationSchema = yup.object().shape({
   email: yup

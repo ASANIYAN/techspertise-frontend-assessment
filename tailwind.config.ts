@@ -22,6 +22,7 @@ const config: Config = {
         color5: "#27779B",
         color6: "#475467",
         color7: "#D0D5DD",
+        color8: "#F2F4F7",
         error: "#E44258",
       },
       screens: {
