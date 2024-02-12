@@ -1,0 +1,59 @@
+.table-container {
+  width: 100%;
+  margin-top: 30px;
+  overflow: auto;
+  display: flex;
+  max-width: 100%;
+}
+
+/* .table-container::-webkit-scrollbar {
+    width: 1em;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background-color: #F7F7F7;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #F08227;
+}
+
+.table-container::-webkit-scrollbar-button {
+    background-color: #E6E6E6; 
+    width: 10px;
+    height: 16px; 
+} */
+
+table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+
+thead tr {
+  background: #eaecf0;
+}
+
+tbody tr:hover {
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+th {
+  padding: 12px 24px;
+  text-align: start;
+  font-family: "Inter";
+}
+
+td {
+  line-height: 24px;
+  padding: 24px;
+  text-align: start;
+}
+
+/* td p {
+  color: #111111;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+} */

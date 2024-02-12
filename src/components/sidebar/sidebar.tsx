@@ -55,7 +55,7 @@ const otherNavigations = [
 ];
 const SideBar = () => {
   return (
-    <aside className="bg-color5 w-[280px] flex flex-col h-screen px-3 pt-10 pb-3">
+    <aside className="bg-color5 w-[280px] flex flex-col h-full px-3 pt-10 pb-3">
       <section className="w-full bg-color6 flex items-center gap-2.5 rounded-lg max-w-[240px] mx-auto py-2.5 px-3.5">
         <Image src={search_icon} width={15} height={15} alt="search_icon" />
         <input

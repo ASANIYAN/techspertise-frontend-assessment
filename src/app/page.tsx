@@ -2,17 +2,18 @@
 
 import Button from "@/components/button/button";
 import { AuthPagesHeading } from "@/components/heading/heading";
+import StudentsTable from "@/components/students-table";
 import AuthWrapper from "@/components/wrapper/auth-wrapper";
 import { Add } from "iconsax-react";
 import Image from "next/image";
 
+const studentsInfo = [
+  { heading: "Total Students", number: "2420" },
+  { heading: "Active Students", number: "1,210" },
+];
 export default function Home() {
   const handleAddStudent = () => {};
 
-  const studentsInfo = [
-    { heading: "Total Students", number: "2420" },
-    { heading: "Active Students", number: "1,210" },
-  ];
   return (
     <main className="">
       <AuthWrapper>
@@ -44,7 +45,9 @@ export default function Home() {
             </section>
           ))}
         </section>
-        <section></section>
+        <section className="mt-5">
+          <StudentsTable />
+        </section>
       </AuthWrapper>
     </main>
   );

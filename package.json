@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
+    "@tanstack/match-sorter-utils": "^8.11.8",
     "@tanstack/react-query": "^5.20.1",
     "@tanstack/react-query-devtools": "^5.20.1",
+    "@tanstack/react-table": "^8.11.8",
     "iconsax-react": "^0.0.8",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.50.1",
+    "react-icons": "^5.0.1",
     "react-toastify": "^10.0.4",
     "yup": "^1.3.3"
   },

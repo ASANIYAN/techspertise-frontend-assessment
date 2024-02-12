@@ -13,7 +13,7 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
     <section className="h-screen">
       <section className="">
         <section className="flex flex-nowrap w-full">
-          <section className="h-full">
+          <section className="">
             <SideBar />
           </section>
           <section className="w-full px-5 overflow-auto">{children}</section>
