@@ -13,7 +13,7 @@ import search_icon from "../../../public/assets/icons/search_icon.svg";
 import logout_icon from "../../../public/assets/icons/logout_icon.svg";
 import avatar from "../../../public/assets/images/avatar.png";
 
-const navigations = [
+export const navigations = [
   {
     icon: home_icon,
     iconActive: home_icon,
@@ -39,7 +39,7 @@ const navigations = [
     text: "Wallet",
   },
 ];
-const otherNavigations = [
+export const otherNavigations = [
   {
     icon: support_icon,
     iconActive: support_icon,
@@ -105,7 +105,7 @@ const SideBar = () => {
   );
 };
 
-const ListItem = ({
+export const ListItem = ({
   icon,
   iconActive,
   pathname,

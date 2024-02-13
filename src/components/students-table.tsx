@@ -202,7 +202,7 @@ const StudentsTable = () => {
         </section>
       ),
       header: () => (
-        <span className="font-medium text-gray-500 text-xs"> Status </span>
+        <span className="font-medium text-gray-500 text-xs"> </span>
       ),
     }),
   ];
