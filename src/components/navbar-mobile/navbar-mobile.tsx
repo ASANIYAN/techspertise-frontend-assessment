@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
+import { useRouter } from "next/navigation";
 import { CloseSquare, HambergerMenu } from "iconsax-react";
 
 import avatar from "../../../public/assets/images/avatar.png";
@@ -9,12 +10,19 @@ import search_icon from "../../../public/assets/icons/search_icon.svg";
 import logout_icon from "../../../public/assets/icons/logout_icon.svg";
 
 import { ListItem, navigations, otherNavigations } from "../sidebar/sidebar";
+import { useDataStore } from "@/store/data-store";
 
 const NavbarMobile = ({
   handleNavbarClosure,
 }: {
   handleNavbarClosure: () => void;
 }) => {
+  const router = useRouter();
+  const { data } = useDataStore();
+  const handleLogout = () => {
+    localStorage.removeItem("techspertiseToken");
+    router.push("/sign-in");
+  };
   return (
     <>
       <section
@@ -65,11 +73,17 @@ const NavbarMobile = ({
             <section className="flex gap-2.5">
               <Image src={avatar} height={40} width={40} alt="avatar" />
               <section className="flex flex-col">
-                <p className=" font-bold"> Ayele Tutor Center </p>
-                <span className="font-normal"> ayele@tutor.com </span>
+                <p className=" font-bold"> {data.firstName} </p>
+                <span className="font-normal"> {data.email} </span>
               </section>
             </section>
-            <Image src={logout_icon} height={18} width={18} alt="logout_icon" />
+            <Image
+              src={logout_icon}
+              height={18}
+              width={18}
+              alt="logout_icon"
+              onClick={handleLogout}
+            />
           </section>
         </section>
       </aside>

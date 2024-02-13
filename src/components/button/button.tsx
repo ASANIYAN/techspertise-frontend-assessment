@@ -15,7 +15,7 @@ const Button: React.FC<
   return (
     <button
       onClick={handleSubmit ? handleSubmit(handleClick) : handleClick}
-      className="bg-color5 flex items-center text-white border border-color5 transition-all hover:bg-white hover:text-color5 w-full text-xs xs:text-sm lg:text-base font-semibold text-center py-2.5 px-4 rounded-lg"
+      className="bg-color5 flex justify-center items-center text-white border border-color5 transition-all hover:bg-white hover:text-color5 w-full text-xs xs:text-sm lg:text-base font-semibold text-center py-3 px-4 rounded-lg"
       {...rest}
     >
       {children}

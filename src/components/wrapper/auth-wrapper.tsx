@@ -1,19 +1,29 @@
 "use client";
 
-import { ReactElement, useState } from "react";
+import { useRouter } from "next/navigation";
+import { ReactElement, useEffect } from "react";
 
 import SideBar from "../sidebar/sidebar";
-import NavbarMobile from "../navbar-mobile/navbar-mobile";
-import { HambergerMenu } from "iconsax-react";
 
 type AuthWrapperProps = {
   children: ReactElement | ReactElement[];
 };
 
 const AuthWrapper: React.FC<AuthWrapperProps> = ({ children }) => {
-  const [displayNavbar, setDisplayNavbar] = useState<boolean>(false);
+  const router = useRouter();
 
-  const handleNavbarOpen = () => setDisplayNavbar(true);
+  useEffect(() => {
+    // Check if "techspertiseToken" is in localStorage
+    const techspertiseToken = localStorage.getItem("techspertiseToken");
+
+    if (!techspertiseToken) {
+      // If "techspertiseToken" is not present, redirect to sign up page
+      router.push("/sign-in");
+    }
+    // If "techspertiseToken" is present, stay on the current page
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <section className="h-full">
       <section className="flex h-screen">

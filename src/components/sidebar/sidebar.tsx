@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Fragment, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import home_icon from "../../../public/assets/icons/home_icon.svg";
 import courses_icon from "../../../public/assets/icons/courses_icon.svg";
@@ -12,6 +12,7 @@ import settings_icon from "../../../public/assets/icons/settings_icon.svg";
 import search_icon from "../../../public/assets/icons/search_icon.svg";
 import logout_icon from "../../../public/assets/icons/logout_icon.svg";
 import avatar from "../../../public/assets/images/avatar.png";
+import { useDataStore } from "@/store/data-store";
 
 export const navigations = [
   {
@@ -54,6 +55,13 @@ export const otherNavigations = [
   },
 ];
 const SideBar = () => {
+  const router = useRouter();
+  const { data } = useDataStore();
+
+  const handleLogout = () => {
+    localStorage.removeItem("techspertiseToken");
+    router.push("/sign-in");
+  };
   return (
     <aside className="bg-color5 w-[280px] flex flex-col min-h-full px-3 pt-10 pb-3">
       <section className="w-full bg-color6 flex items-center gap-2.5 rounded-lg max-w-[240px] mx-auto py-2.5 px-3.5">
@@ -94,11 +102,18 @@ const SideBar = () => {
           <section className="flex gap-2.5">
             <Image src={avatar} height={40} width={40} alt="avatar" />
             <section className="flex flex-col">
-              <p className=" font-bold"> Ayele Tutor Center </p>
-              <span className="font-normal"> ayele@tutor.com </span>
+              <p className=" font-bold"> {data.firstName} </p>
+              <span className="font-normal"> {data.email} </span>
             </section>
           </section>
-          <Image src={logout_icon} height={18} width={18} alt="logout_icon" />
+          <Image
+            src={logout_icon}
+            height={18}
+            width={18}
+            alt="logout_icon"
+            className="cursor-pointer"
+            onClick={handleLogout}
+          />
         </section>
       </section>
     </aside>

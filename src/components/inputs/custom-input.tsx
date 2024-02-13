@@ -31,7 +31,9 @@ export const CustomInput: React.FC<
         </label>
         <input
           {...register(name)}
-          className={`focus:outline-none border rounded-md p-4 text-base font-normal leading-[18px] text-color2 placeholder:text-sm placeholder:leading-5 placeholder:text-color2 bg-white ${
+          className={`focus:outline-none border rounded-md pl-4 py-4 ${
+            defaultType === "password" && "pr-10"
+          } text-base font-normal leading-[18px] text-color2 placeholder:text-sm placeholder:leading-5 placeholder:text-color2 bg-white ${
             errors[name] ? " border-error" : "border-color7"
           }`}
           name={name}
